@@ -74,7 +74,7 @@
         }
 
         .logo {
-            max-width: 200px;
+            max-width: 450px;  /* Changed from 200px */
             height: auto;
             margin: 0 auto 20px;
             display: block;
@@ -333,6 +333,15 @@
             opacity: 0.8;
         }
 
+        .sponsor-item {
+            text-decoration: none !important;
+            color: inherit; /* keeps your existing text color */
+        }
+
+        .sponsor-item * {
+            text-decoration: none !important; /* removes underline from inner text */
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -393,9 +402,13 @@
     <a href="https://luma.com/ywxrt4pk" id="floating-cta" target="_blank">Register Now 🚀</a>
 
     <header class="hero">
+        <div style="position: absolute; top: 20px; left: 20px; z-index: 10;">
+            <img src="media/logo-curtin.svg" alt="Partner Logo" width="200" style="height:auto;">
+        </div>
+
         <div class="hero-content">
             <img src="media/Adobe Express - file.png" alt="AI Disrupt Summit 2025" class="logo">
-            <h1>AI DISRUPT<br>SUMMIT <br>2025</h1>
+            <h1>AI DISRUPT<br>SUMMIT 2025 <br> PERTH</h1>
             <p class="subtitle">Perth's Premier AI Builder Conference</p>
             <p class="tagline">Not just a conference - a movement</p>
 
@@ -418,25 +431,25 @@
         </div>
     </header>
 
-        <div style="background: white; padding: 40px 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <div style="background: white; padding: 30px 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
         <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-            <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--text-dark);">Event Starts In</h3>
-            <div id="countdown" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 20px 30px; border-radius: 12px; min-width: 100px; box-shadow: 0 4px 12px rgba(250, 143, 50, 0.3);">
-                    <div id="days" style="font-size: 3rem; font-weight: 800; line-height: 1;">0</div>
-                    <div style="font-size: 0.9rem; text-transform: uppercase; margin-top: 5px; opacity: 0.9;">Days</div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 15px; color: var(--text-dark);">Event Starts In</h3>
+            <div id="countdown" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 15px 20px; border-radius: 10px; min-width: 80px; box-shadow: 0 4px 12px rgba(250, 143, 50, 0.3);">
+                    <div id="days" style="font-size: 2.2rem; font-weight: 800; line-height: 1;">0</div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase; margin-top: 3px; opacity: 0.9;">Days</div>
                 </div>
-                <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 20px 30px; border-radius: 12px; min-width: 100px; box-shadow: 0 4px 12px rgba(250, 143, 50, 0.3);">
-                    <div id="hours" style="font-size: 3rem; font-weight: 800; line-height: 1;">0</div>
-                    <div style="font-size: 0.9rem; text-transform: uppercase; margin-top: 5px; opacity: 0.9;">Hours</div>
+                <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 15px 20px; border-radius: 10px; min-width: 80px; box-shadow: 0 4px 12px rgba(250, 143, 50, 0.3);">
+                    <div id="hours" style="font-size: 2.2rem; font-weight: 800; line-height: 1;">0</div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase; margin-top: 3px; opacity: 0.9;">Hours</div>
                 </div>
-                <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 20px 30px; border-radius: 12px; min-width: 100px; box-shadow: 0 4px 12px rgba(250, 143, 50, 0.3);">
-                    <div id="minutes" style="font-size: 3rem; font-weight: 800; line-height: 1;">0</div>
-                    <div style="font-size: 0.9rem; text-transform: uppercase; margin-top: 5px; opacity: 0.9;">Minutes</div>
+                <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 15px 20px; border-radius: 10px; min-width: 80px; box-shadow: 0 4px 12px rgba(250, 143, 50, 0.3);">
+                    <div id="minutes" style="font-size: 2.2rem; font-weight: 800; line-height: 1;">0</div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase; margin-top: 3px; opacity: 0.9;">Minutes</div>
                 </div>
-                <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 20px 30px; border-radius: 12px; min-width: 100px; box-shadow: 0 4px 12px rgba(250, 143, 50, 0.3);">
-                    <div id="seconds" style="font-size: 3rem; font-weight: 800; line-height: 1;">0</div>
-                    <div style="font-size: 0.9rem; text-transform: uppercase; margin-top: 5px; opacity: 0.9;">Seconds</div>
+                <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 15px 20px; border-radius: 10px; min-width: 80px; box-shadow: 0 4px 12px rgba(250, 143, 50, 0.3);">
+                    <div id="seconds" style="font-size: 2.2rem; font-weight: 800; line-height: 1;">0</div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase; margin-top: 3px; opacity: 0.9;">Seconds</div>
                 </div>
             </div>
         </div>
@@ -446,7 +459,13 @@
         <section class="about">
             <h2>About the Summit</h2>
             <p style="font-size: 1.2rem; text-align: center; max-width: 900px; margin: 0 auto 40px; line-height: 1.8;">
-                Build Club Perth x Bloom x Curtin Entrepreneurs are proud to present the AI Disrupt Summit,
+                <span class="partners">
+                    <a href="https://www.buildclub.ai/" target="_blank" style="color: var(--accent); text-decoration: underline;">Build Club Perth</a>
+                    ×
+                    <a href="https://www.bloom.org.au" target="_blank" style="color: var(--accent); text-decoration: underline;">Bloom</a>
+                    ×
+                    <a href="https://www.curtin.edu.au/engage/entrepreneurs/" target="_blank" style="color: var(--accent); text-decoration: underline;">Curtin Entrepreneurs</a>
+                </span> are proud to present the AI Disrupt Summit,
                 a hands-on event shaping the future of technology in Western Australia. Taking place as part
                 of West Tech Fest, this one-day summit brings together over 200 AI engineers, researchers,
                 founders, and investors who are actively building the next generation of AI solutions.
@@ -464,8 +483,8 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">💻</div>
-                    <h3>Hands-on Hackathon</h3>
-                    <p>Collaborate to develop real-world AI projects and compete for prizes!</p>
+                    <h3>Hackathon</h3>
+                    <p>Compete in our Hackathon sponsored by Lovable</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🛠️</div>
@@ -485,7 +504,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">🍺</div>
                     <h3>Sundowner</h3>
-                    <p>5:30PM-7PM networking drinks sponsored by Blackbird</p>
+                    <p>Networking drinks sponsored by Blackbird</p>
                 </div>
             </div>
         </section>
@@ -502,11 +521,11 @@
 
     <div class="highlight-box">
         <div class="container" style="padding: 0;">
-            <h2 style="margin-bottom: 20px;">⚠️ Important: Bring Your Laptop!</h2>
+            <h2 style="margin-bottom: 20px;">Bring your devices</h2>
             <p style="text-align: center; font-size: 1.3rem; max-width: 800px; margin: 0 auto; line-height: 1.8;">
-                <strong>All attendees should bring their laptops to the summit.</strong><br>
-                This is especially critical if you're participating in the Hackathon or Workshop sessions, 
-                where you'll be building and coding hands-on projects throughout the day.
+                Attendees should bring their laptops to the summit<br>
+                Especially for Hackathon or Workshop sessions
+                where you'll be building and coding hands-on projects during the day
             </p>
         </div>
     </div>
@@ -523,72 +542,81 @@
 
     <div class="sponsors-section">
         <div class="container">
-            <h2>Our Sponsors</h2>
-            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 30px;">Thank you to our amazing sponsors making this event possible</p>
-            <div class="sponsors-grid">
-                <div class="sponsor-item">
-                    <img src="media/bloom-logo.png" alt="Bloom" class="sponsor-logo">
-                    <div>
-                        <div class="sponsor-name">Bloom</div>
-                        <span class="sponsor-category">Afternoon Tea Sponsor</span>
-                    </div>
-                </div>
-                <div class="sponsor-item">
-                    <img src="media/curtin-logo.png" alt="Curtin Entrepreneurship" class="sponsor-logo">
-                    <div>
-                        <div class="sponsor-name">Curtin Entrepreneurship</div>
-                        <span class="sponsor-category">Lunch Sponsor</span>
-                    </div>
-                </div>
-                <div class="sponsor-item">
-                    <img src="media/blackbird-logo.svg" alt="Blackbird" class="sponsor-logo">
-                    <div>
-                        <div class="sponsor-name">Blackbird</div>
-                        <span class="sponsor-category">Sundowner Sponsor</span>
-                    </div>
-                </div>
-                <div class="sponsor-item">
-                    <img src="media/dddperth-logo.svg" alt="DDD Perth" class="sponsor-logo">
-                    <div>
-                        <div class="sponsor-name">DDD Perth</div>
-                        <span class="sponsor-category">Community Partner</span>
-                    </div>
-                </div>
-                <div class="sponsor-item">
-                    <img src="media/wadsih-logo.png" alt="WA Data Science Innovation Hub" class="sponsor-logo">
-                    <div>
-                        <div class="sponsor-name">WADSIH</div>
-                        <span class="sponsor-category">Sponsor</span>
-                    </div>
-                </div>
-                <div class="sponsor-item">
-                    <div>
-                        <div class="sponsor-name">Horst Maberly</div>
-                        <span class="sponsor-category">Sponsor</span>
-                    </div>
-                </div>
-                <div class="sponsor-item">
-                    <img src="media/lovable-logo.svg" alt="Lovable" class="sponsor-logo">
-                    <div>
-                        <div class="sponsor-name">Lovable</div>
-                        <span class="sponsor-category">Sponsor</span>
-                    </div>
-                </div>
-                <div class="sponsor-item">
-                    <img src="media/buildclub.png" alt="Build Club" class="sponsor-logo">
-                    <div>
-                        <div class="sponsor-name">Build Club</div>
-                        <span class="sponsor-category">Sponsor</span>
-                    </div>
-                </div>
-                <div class="sponsor-item">
-                    <img src="media/matilda-logo.png" alt="Matilda Health" class="sponsor-logo">
-                    <div>
-                        <div class="sponsor-name">Matilda Health</div>
-                        <span class="sponsor-category">Cinny Scroll Sponsor</span>
-                    </div>
-                </div>
+                <h2>Our Sponsors</h2>
+                <p style="text-align: center; font-size: 1.1rem; margin-bottom: 30px;">Thank you to our amazing sponsors making this event possible</p>
+        <div class="sponsors-grid">
+
+        <a class="sponsor-item" href="https://www.buildclub.ai/" target="_blank">
+            <img src="media/buildclub.png" alt="Build Club" class="sponsor-logo">
+            <div>
+                <div class="sponsor-name">Build Club</div>
+                <span class="sponsor-category">Sponsor</span>
             </div>
+        </a>
+
+        <a class="sponsor-item" href="https://www.bloom.org.au/" target="_blank">
+            <img src="media/bloom-logo.png" alt="Bloom" class="sponsor-logo">
+            <div>
+                <div class="sponsor-name">Bloom</div>
+                <span class="sponsor-category">Afternoon Tea and Venue Sponsor</span>
+            </div>
+        </a>
+
+        <a class="sponsor-item" href="https://www.curtin.edu.au/engage/entrepreneurs/" target="_blank">
+            <img src="media/curtin.jpeg" alt="Curtin Entrepreneurs" class="sponsor-logo">
+            <div>
+                <div class="sponsor-name">Curtin Entrepreneurs</div>
+                <span class="sponsor-category">Lunch Sponsor</span>
+            </div>
+        </a>
+
+        <a class="sponsor-item" href="https://www.blackbird.vc/" target="_blank">
+            <img src="media/blackbird-logo.svg" alt="Blackbird" class="sponsor-logo">
+            <div>
+                <div class="sponsor-name">Blackbird</div>
+                <span class="sponsor-category">Sundowner Sponsor</span>
+            </div>
+        </a>
+
+        <a class="sponsor-item" href="https://dddperth.com/" target="_blank">
+            <img src="media/dddperth-logo.svg" alt="DDD Perth" class="sponsor-logo">
+            <div>
+                <div class="sponsor-name">DDD Perth</div>
+                <span class="sponsor-category">Community Partner</span>
+            </div>
+        </a>
+
+        <a class="sponsor-item" href="https://wadsih.org.au/" target="_blank">
+            <img src="media/wadsih-logo.png" alt="WADSIH" class="sponsor-logo">
+            <div>
+                <div class="sponsor-name">WADSIH</div>
+                <span class="sponsor-category">Sponsor</span>
+            </div>
+        </a>
+
+        <!-- Horst Maberly has no logo -->
+        <a class="sponsor-item" href="https://www.linkedin.com/in/horst-maberly-675b081b8/" target="_blank">
+            <div>
+                <div class="sponsor-name">Horst Maberly</div>
+                <span class="sponsor-category">Sponsor</span>
+            </div>
+        </a>
+
+        <a class="sponsor-item" href="https://lovable.dev/" target="_blank">
+            <img src="media/lovable-logo.svg" alt="Lovable" class="sponsor-logo">
+            <div>
+                <div class="sponsor-name">Lovable</div>
+                <span class="sponsor-category">Sponsor</span>
+            </div>
+        </a>
+
+        <a class="sponsor-item" href="https://www.matilda.health/" target="_blank">
+            <img src="media/matilda-logo.png" alt="Matilda Health" class="sponsor-logo">
+            <div>
+                <div class="sponsor-name">Matilda Health</div>
+                <span class="sponsor-category">Cinny Scroll Sponsor</span>
+            </div>
+        </a>
         </div>
     </div>
 
@@ -596,7 +624,7 @@
         <div class="container">
             <h2>Venue</h2>
             <p style="text-align: center; font-size: 1.2rem; margin-bottom: 20px; line-height: 1.8;">
-                The AI Disrupt Summit is proudly sponsored by <a href="https://www.bloom.org.au/" target="_blank" style="color: var(--accent); text-decoration: underline;">Bloom</a> and providing our venue space.
+                The AI Disrupt Summit is proudly sponsored by <a href="https://www.bloom.org.au/" target="_blank" style="color: var(--accent); text-decoration: underline;">Bloom</a> who are providing our venue space.
             </p>
             <p style="text-align: center; font-size: 1.3rem; font-weight: 600; margin-bottom: 15px;">
                 <a href="https://www.google.com/maps/search/?api=1&query=St+Catherine's+College+Curtin+University" target="_blank" style="color: white; text-decoration: underline;">St Catherine's College</a><br>
@@ -622,15 +650,19 @@
             <div class="location-grid">
                 <div class="location-card">
                     <h3>St Catherine's Dining Hall</h3>
-                    <p>The main event will happen here - speakers, expo, and primary activities throughout the day.</p>
+                    <p>The main event will happen here - speakers, expo, and primary activities throughout the day</p>
                 </div>
                 <div class="location-card">
                     <h3>Bloom Basement Space</h3>
-                    <p>Additional activities in the basement area for hackathon, breakout sessions, and networking.</p>
+                    <p>Additional activities in the basement area for hackathon, breakout sessions, and networking</p>
+                </div>
+                <div class="location-card">
+                    <h3>Courtyard</h3>
+                    <p>Available for networking all day</p>
                 </div>
                 <div class="location-card">
                     <h3>🚗 Car Parking</h3>
-                    <p>Car parking will be readily available on Saturday at Curtin University.</p>
+                    <p>Car parking will be readily available on Saturday at Curtin University</p>
                 </div>
             </div>
         </div>
@@ -646,19 +678,11 @@
                 </div>
                 <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 20px;">
                     <h3 style="color: var(--primary-color); margin-bottom: 10px;">Is food provided?</h3>
-                    <p>Yes! Lunch is sponsored by Curtin Entrepreneurship, afternoon tea by Bloom, and we'll have sundowner drinks from 5:30-7PM sponsored by Blackbird.</p>
+                    <p>Morning tea, lunch, afternoon tea and sundowner are catered.</p>
                 </div>
                 <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 20px;">
                     <h3 style="color: var(--primary-color); margin-bottom: 10px;">Do I need to be technical to attend?</h3>
                     <p>No! While we have technical workshops and a hackathon, the summit welcomes everyone from beginners to experts. Our speaker series and networking opportunities are valuable for all skill levels.</p>
-                </div>
-                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 20px;">
-                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">What's the dress code?</h3>
-                    <p>Casual and comfortable! This is a tech conference - come as you are.</p>
-                </div>
-                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 20px;">
-                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">Is parking available?</h3>
-                    <p>Yes, car parking will be readily available on Saturday at Curtin University.</p>
                 </div>
                 <!-- <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <h3 style="color: var(--primary-color); margin-bottom: 10px;">Have more questions?</h3>
@@ -683,46 +707,45 @@
         </div>
     </footer>
 
-<script>
-    // Countdown Timer
-    const eventDate = new Date('December 13, 2025 09:00:00').getTime();
-    
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = eventDate - now;
+    <script>
+        // Countdown Timer
+        const eventDate = new Date('December 13, 2025 09:00:00').getTime();
         
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-        document.getElementById('days').textContent = days;
-        document.getElementById('hours').textContent = hours;
-        document.getElementById('minutes').textContent = minutes;
-        document.getElementById('seconds').textContent = seconds;
-        
-        if (distance < 0) {
-            document.getElementById('countdown').innerHTML = '<p style="font-size: 2rem; color: var(--primary-color); font-weight: 700;">The event is happening now!</p>';
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+            
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = '<p style="font-size: 2rem; color: var(--primary-color); font-weight: 700;">The event is happening now!</p>';
+            }
         }
-    }
-    
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-
-    // Floating CTA Button - Show after scrolling past hero
-    const floatingCTA = document.getElementById('floating-cta');
-    const heroSection = document.querySelector('.hero');
-    
-    window.addEventListener('scroll', function() {
-        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
         
-        if (window.scrollY > heroBottom) {
-            floatingCTA.classList.add('visible');
-        } else {
-            floatingCTA.classList.remove('visible');
-        }
-    });
-</script>
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
 
+        // Floating CTA Button - Show after scrolling past hero
+        const floatingCTA = document.getElementById('floating-cta');
+        const heroSection = document.querySelector('.hero');
+        
+        window.addEventListener('scroll', function() {
+            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            
+            if (window.scrollY > heroBottom) {
+                floatingCTA.classList.add('visible');
+            } else {
+                floatingCTA.classList.remove('visible');
+            }
+        });
+    </script>
 </body>
 </html>
