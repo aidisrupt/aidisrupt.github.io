@@ -178,7 +178,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('media/sunset_perth.svg');
+            /* background-image: url('media/sunset_perth.svg'); */
             background-size: cover;
             background-position: center;
             opacity: 0.08;
@@ -350,16 +350,54 @@
                 font-size: 2rem;
             }
 
+            #floating-cta {
+                padding: 15px 35px;
+                font-size: 1rem;
+            }
+
+        }
+
+        #floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 24px rgba(250, 143, 50, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(100px);
+            pointer-events: none;
+        }
+
+        #floating-cta.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        #floating-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(250, 143, 50, 0.5);
         }
     </style>
 </head>
 <body>
+    <!-- Floating CTA Button -->
+    <a href="https://luma.com/ywxrt4pk" id="floating-cta" target="_blank">Register Now 🚀</a>
+
     <header class="hero">
         <div class="hero-content">
             <img src="media/Adobe Express - file.png" alt="AI Disrupt Summit 2025" class="logo">
-            <h1>AI DISRUPT<br>SUMMIT</h1>
+            <h1>AI DISRUPT<br>SUMMIT <br>2025</h1>
             <p class="subtitle">Perth's Premier AI Builder Conference</p>
-            <p class="tagline">Not just a conference—a movement</p>
+            <p class="tagline">Not just a conference - a movement</p>
 
             <div class="event-details">
                 <div class="event-detail">
@@ -379,6 +417,30 @@
             <a href="https://luma.com/ywxrt4pk" class="cta-button" target="_blank">Register Now</a>
         </div>
     </header>
+
+        <div style="background: white; padding: 40px 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--text-dark);">Event Starts In</h3>
+            <div id="countdown" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 20px 30px; border-radius: 12px; min-width: 100px; box-shadow: 0 4px 12px rgba(250, 143, 50, 0.3);">
+                    <div id="days" style="font-size: 3rem; font-weight: 800; line-height: 1;">0</div>
+                    <div style="font-size: 0.9rem; text-transform: uppercase; margin-top: 5px; opacity: 0.9;">Days</div>
+                </div>
+                <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 20px 30px; border-radius: 12px; min-width: 100px; box-shadow: 0 4px 12px rgba(250, 143, 50, 0.3);">
+                    <div id="hours" style="font-size: 3rem; font-weight: 800; line-height: 1;">0</div>
+                    <div style="font-size: 0.9rem; text-transform: uppercase; margin-top: 5px; opacity: 0.9;">Hours</div>
+                </div>
+                <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 20px 30px; border-radius: 12px; min-width: 100px; box-shadow: 0 4px 12px rgba(250, 143, 50, 0.3);">
+                    <div id="minutes" style="font-size: 3rem; font-weight: 800; line-height: 1;">0</div>
+                    <div style="font-size: 0.9rem; text-transform: uppercase; margin-top: 5px; opacity: 0.9;">Minutes</div>
+                </div>
+                <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 20px 30px; border-radius: 12px; min-width: 100px; box-shadow: 0 4px 12px rgba(250, 143, 50, 0.3);">
+                    <div id="seconds" style="font-size: 3rem; font-weight: 800; line-height: 1;">0</div>
+                    <div style="font-size: 0.9rem; text-transform: uppercase; margin-top: 5px; opacity: 0.9;">Seconds</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <section class="about">
@@ -403,7 +465,12 @@
                 <div class="feature-card">
                     <div class="feature-icon">💻</div>
                     <h3>Hands-on Hackathon</h3>
-                    <p>Collaborate to develop real-world AI projects</p>
+                    <p>Collaborate to develop real-world AI projects and compete for prizes!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛠️</div>
+                    <h3>Technical Workshop</h3>
+                    <p>Build your first AI home lab with Ollama, n8n, and VeilNet</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🤝</div>
@@ -433,6 +500,27 @@
         </section>
     </div>
 
+    <div class="highlight-box">
+        <div class="container" style="padding: 0;">
+            <h2 style="margin-bottom: 20px;">⚠️ Important: Bring Your Laptop!</h2>
+            <p style="text-align: center; font-size: 1.3rem; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+                <strong>All attendees should bring their laptops to the summit.</strong><br>
+                This is especially critical if you're participating in the Hackathon or Workshop sessions, 
+                where you'll be building and coding hands-on projects throughout the day.
+            </p>
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <div class="container" style="padding: 0;">
+            <h2 style="margin-bottom: 20px;">🏆 Hackathon Prize</h2>
+            <p style="text-align: center; font-size: 1.3rem; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+                Compete in our hands-on hackathon and build real-world AI projects throughout the day. 
+                The winning team will receive <strong>exciting prizes</strong> and recognition from industry leaders!
+            </p>
+        </div>
+    </div>
+
     <div class="sponsors-section">
         <div class="container">
             <h2>Our Sponsors</h2>
@@ -457,13 +545,6 @@
                     <div>
                         <div class="sponsor-name">Blackbird</div>
                         <span class="sponsor-category">Sundowner Sponsor</span>
-                    </div>
-                </div>
-                <div class="sponsor-item">
-                    <img src="media/matilda-logo.png" alt="Matilda Health" class="sponsor-logo">
-                    <div>
-                        <div class="sponsor-name">Matilda Health</div>
-                        <span class="sponsor-category">Cinny Scroll Sponsor</span>
                     </div>
                 </div>
                 <div class="sponsor-item">
@@ -493,6 +574,20 @@
                         <span class="sponsor-category">Sponsor</span>
                     </div>
                 </div>
+                <div class="sponsor-item">
+                    <img src="media/buildclub.png" alt="Build Club" class="sponsor-logo">
+                    <div>
+                        <div class="sponsor-name">Build Club</div>
+                        <span class="sponsor-category">Sponsor</span>
+                    </div>
+                </div>
+                <div class="sponsor-item">
+                    <img src="media/matilda-logo.png" alt="Matilda Health" class="sponsor-logo">
+                    <div>
+                        <div class="sponsor-name">Matilda Health</div>
+                        <span class="sponsor-category">Cinny Scroll Sponsor</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -500,19 +595,77 @@
     <div class="location-section">
         <div class="container">
             <h2>Venue</h2>
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px;">St Catherine's College at Curtin University<br>433 University Bvd, Bentley WA 6102, Australia</p>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 20px; line-height: 1.8;">
+                The AI Disrupt Summit is proudly sponsored by <a href="https://www.bloom.org.au/" target="_blank" style="color: var(--accent); text-decoration: underline;">Bloom</a> and providing our venue space.
+            </p>
+            <p style="text-align: center; font-size: 1.3rem; font-weight: 600; margin-bottom: 15px;">
+                <a href="https://www.google.com/maps/search/?api=1&query=St+Catherine's+College+Curtin+University" target="_blank" style="color: white; text-decoration: underline;">St Catherine's College</a><br>
+                Building 433 University Boulevarde, Curtin University
+            </p>
+            <p style="text-align: center; margin-bottom: 40px;">
+                <a href="https://www.stcats.com.au/curtin-campus" target="_blank" style="color: var(--accent); margin-right: 20px;">St Catherine's Website</a>
+                <a href="https://campusmap.curtin.edu.au/bentley/?poi=1001354552" target="_blank" style="color: var(--accent);">Campus Map</a>
+            </p>
+
+            <div style="text-align: center; margin-bottom: 40px;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d502.95861037474384!2d115.88953796243057!3d-32.001872268013095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32bdee579f0a73%3A0xfa766fa38853f194!2sSt%20Catherine&#39;s%20College%20at%20Curtin%20University!5e0!3m2!1sen!2sau!4v1763272878492!5m2!1sen!2sau" 
+                    width="100%" 
+                    height="450" 
+                    style="border: 0; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.3);" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
 
             <div class="location-grid">
                 <div class="location-card">
                     <h3>St Catherine's Dining Hall</h3>
-                    <p>The main event space where speakers, expo, and primary activities will take place throughout the day.</p>
+                    <p>The main event will happen here - speakers, expo, and primary activities throughout the day.</p>
                 </div>
                 <div class="location-card">
                     <h3>Bloom Basement Space</h3>
-                    <p>Additional activity space in the basement area for hackathon, breakout sessions, and networking.</p>
+                    <p>Additional activities in the basement area for hackathon, breakout sessions, and networking.</p>
+                </div>
+                <div class="location-card">
+                    <h3>🚗 Car Parking</h3>
+                    <p>Car parking will be readily available on Saturday at Curtin University.</p>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="container">
+        <section>
+            <h2>Frequently Asked Questions</h2>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 20px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">What should I bring?</h3>
+                    <p>Please bring your laptop (essential for Hackathon and Workshop), charger, and a reusable water bottle to stay hydrated throughout the day.</p>
+                </div>
+                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 20px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">Is food provided?</h3>
+                    <p>Yes! Lunch is sponsored by Curtin Entrepreneurship, afternoon tea by Bloom, and we'll have sundowner drinks from 5:30-7PM sponsored by Blackbird.</p>
+                </div>
+                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 20px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">Do I need to be technical to attend?</h3>
+                    <p>No! While we have technical workshops and a hackathon, the summit welcomes everyone from beginners to experts. Our speaker series and networking opportunities are valuable for all skill levels.</p>
+                </div>
+                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 20px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">What's the dress code?</h3>
+                    <p>Casual and comfortable! This is a tech conference - come as you are.</p>
+                </div>
+                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 20px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">Is parking available?</h3>
+                    <p>Yes, car parking will be readily available on Saturday at Curtin University.</p>
+                </div>
+                <!-- <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">Have more questions?</h3>
+                    <p>Reach out to <a href="" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Susannah on LinkedIn</a> for any additional information!</p>
+                </div> -->
+            </div>
+        </section>
     </div>
 
     <footer>
@@ -529,5 +682,47 @@
             </div>
         </div>
     </footer>
+
+<script>
+    // Countdown Timer
+    const eventDate = new Date('December 13, 2025 09:00:00').getTime();
+    
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        document.getElementById('days').textContent = days;
+        document.getElementById('hours').textContent = hours;
+        document.getElementById('minutes').textContent = minutes;
+        document.getElementById('seconds').textContent = seconds;
+        
+        if (distance < 0) {
+            document.getElementById('countdown').innerHTML = '<p style="font-size: 2rem; color: var(--primary-color); font-weight: 700;">The event is happening now!</p>';
+        }
+    }
+    
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Floating CTA Button - Show after scrolling past hero
+    const floatingCTA = document.getElementById('floating-cta');
+    const heroSection = document.querySelector('.hero');
+    
+    window.addEventListener('scroll', function() {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        
+        if (window.scrollY > heroBottom) {
+            floatingCTA.classList.add('visible');
+        } else {
+            floatingCTA.classList.remove('visible');
+        }
+    });
+</script>
+
 </body>
 </html>
