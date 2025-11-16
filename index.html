@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Disrupt Summit 2025 - Perth</title>
+    <meta name="description" content="AI Disrupt Summit 2025 - A hands-on event bringing together AI engineers, researchers, founders, and investors in Perth, WA. December 13th, 2025.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #FA8F32;
+            --secondary-color: #EF6E4A;
+            --dark-blue: #0F4A7F;
+            --darker-blue: #0C2D4C;
+            --light-bg: #f8fafc;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --accent: #FA6146;
+            --sunset-orange: #FAB337;
+            --sunset-red: #DE5A4A;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--darker-blue) 100%);
+            color: white;
+            padding: 60px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('media/sunset_perth.svg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(to top, var(--primary-color) 0%, transparent 100%);
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            z-index: 1;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            letter-spacing: 0.05em;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .event-details {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .event-detail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .event-detail-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .event-detail-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 18px 48px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--dark-bg);
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 60px 20px;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('media/sunset_perth.svg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.08;
+            z-index: 0;
+        }
+
+        .highlight-box > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .highlight-box h2 {
+            color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+        }
+
+        .sponsors-section {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .sponsor-item {
+            padding: 15px;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            background: var(--light-bg);
+            border-radius: 8px;
+        }
+
+        .sponsor-category {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            display: block;
+            margin-top: 5px;
+        }
+
+        .location-section {
+            background: var(--darker-blue);
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .location-section h2 {
+            color: white;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .location-card {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .location-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .speakers-section {
+            padding: 60px 20px;
+            background: var(--light-bg);
+        }
+
+        #sessionize-container {
+            margin-top: 40px;
+        }
+
+        footer {
+            background: var(--darker-blue);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .footer-note {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .event-details {
+                gap: 20px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <img src="media/Adobe Express - file.png" alt="AI Disrupt Summit 2025" class="logo">
+            <h1>AI DISRUPT<br>SUMMIT</h1>
+            <p class="subtitle">Perth's Premier AI Builder Conference</p>
+            <p class="tagline">Not just a conference—a movement</p>
+
+            <div class="event-details">
+                <div class="event-detail">
+                    <div class="event-detail-icon">📅</div>
+                    <div class="event-detail-text">December 13, 2025</div>
+                </div>
+                <div class="event-detail">
+                    <div class="event-detail-icon">📍</div>
+                    <div class="event-detail-text">Curtin University, Perth</div>
+                </div>
+                <div class="event-detail">
+                    <div class="event-detail-icon">👥</div>
+                    <div class="event-detail-text">200+ Attendees</div>
+                </div>
+            </div>
+
+            <a href="https://luma.com/ywxrt4pk" class="cta-button" target="_blank">Register Now</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="about">
+            <h2>About the Summit</h2>
+            <p style="font-size: 1.2rem; text-align: center; max-width: 900px; margin: 0 auto 40px; line-height: 1.8;">
+                Build Club Perth x Bloom x Curtin Entrepreneurs are proud to present the AI Disrupt Summit,
+                a hands-on event shaping the future of technology in Western Australia. Taking place as part
+                of West Tech Fest, this one-day summit brings together over 200 AI engineers, researchers,
+                founders, and investors who are actively building the next generation of AI solutions.
+            </p>
+            <div class="features-grid" style="margin-top: 50px;">
+                <div class="feature-card">
+                    <div class="feature-icon">🎤</div>
+                    <h3>Speaker Series</h3>
+                    <p>Australia's leading AI thinkers and practitioners</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Startup Expo</h3>
+                    <p>Innovative local ventures showcasing AI technology</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>Hands-on Hackathon</h3>
+                    <p>Collaborate to develop real-world AI projects</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Networking</h3>
+                    <p>Connect with mentors and industry leaders</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Investor Talks</h3>
+                    <p>Insights into the AI startup funding landscape</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍺</div>
+                    <h3>Sundowner</h3>
+                    <p>5:30PM-7PM networking drinks sponsored by Blackbird</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <section class="speakers-section">
+            <h2>Speakers & Sessions</h2>
+            <div id="sessionize-container">
+                <script type="text/javascript" src="https://sessionize.com/api/v2/v08m222o/view/GridSmart"></script>
+            </div>
+        </section>
+    </div>
+
+    <div class="sponsors-section">
+        <div class="container">
+            <h2>Our Sponsors</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 30px;">Thank you to our amazing sponsors making this event possible</p>
+            <div class="sponsors-grid">
+                <div class="sponsor-item">
+                    <strong>Bloom</strong>
+                    <span class="sponsor-category">Afternoon Tea Sponsor</span>
+                </div>
+                <div class="sponsor-item">
+                    <strong>Curtin Entrepreneurship</strong>
+                    <span class="sponsor-category">Lunch Sponsor</span>
+                </div>
+                <div class="sponsor-item">
+                    <strong>Blackbird</strong>
+                    <span class="sponsor-category">Sundowner Sponsor</span>
+                </div>
+                <div class="sponsor-item">
+                    <strong>Matilda Health</strong>
+                    <span class="sponsor-category">Cinny Scroll Sponsor</span>
+                </div>
+                <div class="sponsor-item">
+                    <strong>DDD Perth</strong>
+                    <span class="sponsor-category">Community Partner</span>
+                </div>
+                <div class="sponsor-item">
+                    <strong>WA Data Science Innovation Hub</strong>
+                    <span class="sponsor-category">Sponsor</span>
+                </div>
+                <div class="sponsor-item">
+                    <strong>Horst Maberly</strong>
+                    <span class="sponsor-category">Sponsor</span>
+                </div>
+                <div class="sponsor-item">
+                    <strong>Lovable</strong>
+                    <span class="sponsor-category">Sponsor</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="location-section">
+        <div class="container">
+            <h2>Venue</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px;">St Catherine's College at Curtin University<br>433 University Bvd, Bentley WA 6102, Australia</p>
+
+            <div class="location-grid">
+                <div class="location-card">
+                    <h3>St Catherine's Dining Hall</h3>
+                    <p>The main event space where speakers, expo, and primary activities will take place throughout the day.</p>
+                </div>
+                <div class="location-card">
+                    <h3>Bloom Basement Space</h3>
+                    <p>Additional activity space in the basement area for hackathon, breakout sessions, and networking.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 20px;">Ready to Shape the Future?</h2>
+            <a href="https://luma.com/ywxrt4pk" class="cta-button" target="_blank">Register Now</a>
+
+            <div class="footer-note">
+                <p><strong>Important Notes:</strong></p>
+                <p>Photos and videos will be taken at the event.</p>
+                <p>As this is a community event, tickets are non-refundable.</p>
+                <p>Stay hydrated - please bring your water bottle!</p>
+                <p style="margin-top: 30px; opacity: 0.7;">Build Club AU ABN: 64 674 988 562</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
