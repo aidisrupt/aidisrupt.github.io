@@ -406,6 +406,8 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 15px;
+            position: relative; 
+            z-index: 1;
         }
 
         .hero-mini-branded .quokka-header-mini {
@@ -433,6 +435,41 @@
             left: 20px; 
             z-index: 10;
         }
+
+        /* --- NEW STARTUP GRID STYLES --- */
+        .startup-logo-link {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            aspect-ratio: 3/2; /* Keeps logos consistently sized */
+            background-color: #f1f5f9; /* Light grey placeholder background */
+            border-radius: 8px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #94a3b8; /* Placeholder text color */
+            font-weight: 600;
+            border: 1px dashed #cbd5e1;
+            transition: all 0.2s ease;
+            overflow: hidden;
+        }
+
+        .startup-logo-link:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            background-color: #fff7ed; /* Very light orange tint on hover */
+        }
+        
+        /* Ensures images fit nicely once added */
+        .startup-logo-link img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 10px;
+        }
+        /* ------------------------------- */
 
         @media (max-width: 768px) {
             .hero h1 {
@@ -490,7 +527,6 @@
     </style>
 </head>
 <body>
-    <!-- Floating CTA Button -->
     <a href="https://luma.com/ywxrt4pk" id="floating-cta" target="_blank">Register Now 🚀</a>
 
     <header class="hero-mini-branded">
@@ -521,17 +557,106 @@
             </p>
 
             <div id="startup-profiles" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px;">
+                
                 <div class="feature-card" style="text-align: center;">
-                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--primary-color);">AlphaTech AI</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px;">GenAI Solutions</p>
-                    <p>Developing custom Large Language Models for local industry clients.</p>
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        Logo
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Reschematic</h4>
                 </div>
+
                 <div class="feature-card" style="text-align: center;">
-                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--primary-color);">Bloom Data</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px;">Data & Analytics</p>
-                    <p>A B2B platform using machine learning to optimize supply chain logistics.</p>
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        Logo
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Podyssey</h4>
                 </div>
+
+                <div class="feature-card" style="text-align: center;">
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        Logo
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Talk2View</h4>
                 </div>
+
+                <div class="feature-card" style="text-align: center;">
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        Logo
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">GoFlow</h4>
+                </div>
+
+                <div class="feature-card" style="text-align: center;">
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        Logo
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">VeilNet</h4>
+                </div>
+
+                <div class="feature-card" style="text-align: center;">
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        Logo
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">AIAdvancements</h4>
+                </div>
+
+                <div class="feature-card" style="text-align: center;">
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        Logo
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Indrus</h4>
+                </div>
+
+                <div class="feature-card" style="text-align: center;">
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        Logo
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Matilda</h4>
+                </div>
+
+                <div class="feature-card" style="text-align: center;">
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        Logo
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">WadSIH</h4>
+                </div>
+
+                <div class="feature-card" style="text-align: center;">
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        Logo
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Blackbird</h4>
+                </div>
+
+                <div class="feature-card" style="text-align: center;">
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        Logo
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Agata Cabanek</h4>
+                </div>
+
+                <div class="feature-card" style="text-align: center;">
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        Logo
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Curtin Entrepreneurship</h4>
+                </div>
+
+                <div class="feature-card" style="text-align: center;">
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        Logo
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Tradie Scribe</h4>
+                </div>
+
+                <div class="feature-card" style="text-align: center;">
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        Logo
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Bloom</h4>
+                </div>
+
+            </div>
         </section>
     </div>
 
@@ -550,11 +675,8 @@
     </footer>
 
     <script>
-
         // Floating CTA Button - Show after scrolling past hero
         const floatingCTA = document.getElementById('floating-cta');
-        
-        // FIX HERE: Target the correct header class used on this page
         const heroSection = document.querySelector('.hero-mini-branded'); 
         
         window.addEventListener('scroll', function() {

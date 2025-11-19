@@ -25,7 +25,7 @@
         @font-face {
             font-family: 'Ignis Sharp';
             src: url('fonts/Ignis et Glacies Sharp Bold.ttf') format('truetype');
-            font-weight: 800; /* Set to match your title's weight */
+            font-weight: 800; 
             font-style: normal;
             font-display: swap;
         }
@@ -55,16 +55,22 @@
             color: var(--text-dark);
         }
 
-        .hero {
+        .hero-mini-branded {
             background: linear-gradient(135deg, var(--dark-blue) 0%, var(--darker-blue) 100%);
             color: white;
-            padding: 60px 20px 80px;
+            padding: 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
+            min-height: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        .hero::before {
+        .hero-mini-branded::before {
             content: '';
             position: absolute;
             top: 0;
@@ -73,82 +79,43 @@
             bottom: 0;
             background-image: url('media/sunset_perth.svg');
             background-size: cover;
-            background-position: center;
+            background-position: center 13%; 
             opacity: 0.15;
             z-index: 0;
         }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 200px;
-            background: linear-gradient(to top, var(--primary-color) 0%, transparent 100%);
-            opacity: 0.1;
-            z-index: 0;
-        }
-
-        .hero-content {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
+        .hero-mini-branded .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            position: relative; 
             z-index: 1;
         }
 
-        .logo {
-            max-width: 450px;  /* Changed from 200px */
+        .hero-mini-branded .quokka-header-mini {
+            width: 150px;
             height: auto;
-            margin: 0 auto 20px;
-            display: block;
+            object-fit: contain;
         }
 
-        .hero h1 {
-            font-size: 5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.1;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            letter-spacing: 0.05em;
-            /* font-family: 'HK Modular', sans-serif;  */
+        .hero-mini-branded h1 {
+            /* SPECIAL FONT APPLIED HERE ONLY */
             font-family: 'Ignis Sharp', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0;
+            line-height: 1.2;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            letter-spacing: 0.03em;
         }
 
-        .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            opacity: 0.95;
-        }
-
-        .hero .tagline {
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
-
-        .event-details {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin: 30px 0;
-            flex-wrap: wrap;
-        }
-
-        .event-detail {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .event-detail-icon {
-            font-size: 2rem;
-            margin-bottom: 8px;
-        }
-
-        .event-detail-text {
-            font-size: 1.1rem;
-            font-weight: 600;
+        .partner-logo-mini {
+            position: absolute; 
+            top: 15px; 
+            left: 20px; 
+            z-index: 10;
         }
 
         .cta-button {
@@ -182,8 +149,12 @@
         h2 {
             font-size: 2.5rem;
             margin-bottom: 30px;
-            color: var(--dark-bg);
+            color: var(--dark-blue);
             text-align: center;
+            font-weight: 800;
+        }
+
+        h3 {
             font-weight: 800;
         }
 
@@ -194,156 +165,89 @@
             margin: 60px 0;
             position: relative;
             overflow: hidden;
+            border-radius: 12px;
         }
 
-        .highlight-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            /* background-image: url('media/sunset_perth.svg'); */
-            background-size: cover;
-            background-position: center;
-            opacity: 0.08;
-            z-index: 0;
+        /* --- PEOPLE SECTION STYLES --- */
+        .people-group {
+            margin-bottom: 60px;
         }
 
-        .highlight-box > * {
+        .group-title {
+            text-align: center;
+            color: var(--dark-blue);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            font-weight: 800;
             position: relative;
-            z-index: 1;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
         }
-
-        .highlight-box h2 {
-            color: white;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .feature-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-            color: var(--primary-color);
-        }
-
-        .sponsors-section {
-            background: white;
-            padding: 60px 20px;
-        }
-
-        .sponsors-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-            align-items: center;
-        }
-
-        .sponsor-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            transition: transform 0.2s, box-shadow 0.2s;
-            height: 160px; 
-        }
-
-        .sponsor-item > div {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;             
-            flex-grow: 1; 
-        }
-
-        .sponsor-logo {
-            max-width: 150px;
-            max-height: 80px;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            margin-bottom: 10px;
-        }
-
-        .sponsor-name {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            text-align: center;
-            margin-top: auto;
-        }
-
-        .sponsor-category {
-            font-size: 0.8rem;
-            color: var(--text-light);
+        
+        .group-title::after {
+            content: '';
             display: block;
-            margin-top: 5px;
-            text-align: center;
+            width: 40px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 8px auto 0;
+            border-radius: 2px;
         }
 
-        .location-section {
-            background: var(--darker-blue);
-            color: white;
-            padding: 60px 20px;
-        }
-
-        .location-section h2 {
-            color: white;
-        }
-
-        .location-grid {
+        .people-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            justify-content: center;
         }
 
-        .location-card {
-            background: rgba(255,255,255,0.1);
-            padding: 25px;
+        .people-grid.centered-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .people-grid.centered-grid .person-card {
+            width: 240px; 
+        }
+
+        .person-card {
+            background: white;
+            padding: 25px 20px;
             border-radius: 12px;
-            backdrop-filter: blur(10px);
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            transition: transform 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        .location-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: var(--accent);
+        .person-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
 
-        .speakers-section {
-            padding: 60px 20px;
-            background: var(--light-bg);
+        .person-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-dark);
         }
 
-        #sessionize-container {
-            margin-top: 40px;
+        .role-badge {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            background: rgba(239, 110, 74, 0.1);
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-top: 8px;
+            font-weight: 600;
         }
 
         footer {
@@ -359,104 +263,7 @@
             opacity: 0.8;
         }
 
-        .sponsor-item {
-            text-decoration: none !important;
-            color: inherit; /* keeps your existing text color */
-        }
-
-        .sponsor-item * {
-            text-decoration: none !important; /* removes underline from inner text */
-        }
-
-        .hero-mini-branded {
-            /* Main container styling: gradient, fixed position */
-            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--darker-blue) 100%);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            min-height: 160px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .hero-mini-branded::before {
-            /* Background image layer */
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('media/sunset_perth.svg');
-            background-size: cover;
-            background-position: center 13%; /* 🎯 FIX: Centers horizontally, aligns to top vertically */
-            opacity: 0.15;
-            z-index: 0;
-        }
-
-        .hero-mini-branded .hero-content {
-            /* Ensures quokka and text align correctly */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .hero-mini-branded .quokka-header-mini {
-            /* Quokka image size */
-            width: 150px;
-            height: auto;
-            object-fit: contain;
-        }
-
-        .hero-mini-branded h1 {
-            /* Title text styling */
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin: 0;
-            line-height: 1.2;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-            font-family: 'Ignis Sharp', sans-serif;
-            letter-spacing: 0.03em;
-        }
-
-        .partner-logo-mini {
-            /* Partner logo positioning */
-            position: absolute; 
-            top: 15px; 
-            left: 20px; 
-            z-index: 10;
-        }
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-
-            .event-details {
-                gap: 20px;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            #floating-cta {
-                padding: 15px 35px;
-                font-size: 1rem;
-            }
-
-        }
-
+        /* Floating Button Styles */
         #floating-cta {
             position: fixed;
             bottom: 20px;
@@ -486,10 +293,19 @@
             transform: translateY(-3px);
             box-shadow: 0 12px 32px rgba(250, 143, 50, 0.5);
         }
+
+        @media (max-width: 768px) {
+            .hero-mini-branded h1 {
+                font-size: 2rem;
+            }
+            #floating-cta {
+                padding: 15px 35px;
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Floating CTA Button -->
     <a href="https://luma.com/ywxrt4pk" id="floating-cta" target="_blank">Register Now 🚀</a>
 
     <header class="hero-mini-branded">
@@ -535,12 +351,76 @@
                 </div>
             </div>
 
-            <div style="max-width: 800px; margin: 50px auto;">
+            <div style="max-width: 800px; margin: 50px auto; text-align: center;">
                 <h3 style="font-size: 1.6rem; margin-bottom: 20px; color: var(--dark-blue);">The Challenge</h3>
                 <p style="font-size: 1.1rem;">
                     The specific <strong> problem statement and technical constraints will be revealed live</strong> at the summit during the Hackathon kick-off.
                 </p>
             </div>
+        </section>
+
+        <section style="background: #f8fafc; padding: 40px 20px; border-radius: 20px; margin-top: 60px;">
+            
+            <div class="people-group">
+                <h3 class="group-title">Hosts</h3>
+                <div class="people-grid centered-grid">
+                    <div class="person-card">
+                        <span class="person-name">Mo Jaimangal</span>
+                        <span class="role-badge">Host</span>
+                    </div>
+                    <div class="person-card">
+                        <span class="person-name">Aidan Morgan</span>
+                        <span class="role-badge">Host</span>
+                    </div>
+                    <div class="person-card">
+                        <span class="person-name">Jeroen van Dalen</span>
+                        <span class="role-badge">Host</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="people-group">
+                <h3 class="group-title">Mentors</h3>
+                <div class="people-grid">
+                    <div class="person-card">
+                        <span class="person-name">David Smith</span>
+                    </div>
+                    <div class="person-card">
+                        <span class="person-name">Sean Oldenberger</span>
+                    </div>
+                    <div class="person-card">
+                        <span class="person-name">John Marshall</span>
+                    </div>
+                    <div class="person-card">
+                        <span class="person-name">Matthew Curnow</span>
+                    </div>
+                    <div class="person-card">
+                        <span class="person-name">Rebecca Waters</span>
+                    </div>
+                    <div class="person-card">
+                        <span class="person-name">Ash Doshi</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="people-group" style="margin-bottom: 0;">
+                <h3 class="group-title">Judges</h3>
+                <div class="people-grid centered-grid">
+                    <div class="person-card">
+                        <span class="person-name">Josephine Tay</span>
+                    </div>
+                    <div class="person-card">
+                        <span class="person-name">Lisa Longman</span>
+                    </div>
+                    <div class="person-card">
+                        <span class="person-name">Alex Jenkins</span>
+                    </div>
+                    <div class="person-card">
+                        <span class="person-name">Curtin Entrepreneurs</span>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </div>
     
@@ -559,19 +439,15 @@
     </footer>
 
     <script>
-
         // Floating CTA Button - Show after scrolling past hero
         const floatingCTA = document.getElementById('floating-cta');
-        
-        // FIX HERE: Target the correct header class used on this page
         const heroSection = document.querySelector('.hero-mini-branded'); 
         
         window.addEventListener('scroll', function() {
-            if (!heroSection) return; // Safely exit if the header isn't found
+            if (!heroSection) return; 
             
             const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
             
-            // We'll add a fixed offset (e.g., 50px) to ensure the button shows up even on a small header
             if (window.scrollY > heroBottom + 50) { 
                 floatingCTA.classList.add('visible');
             } else {
