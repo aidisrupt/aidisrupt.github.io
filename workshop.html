@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Disrupt Summit 2025 - Perth</title>
+    <meta name="description" content="AI Disrupt Summit 2025 - A hands-on event bringing together AI engineers, researchers, founders, and investors in Perth, WA. December 13th, 2025.">
+    <style>
+        @font-face {
+            font-family: 'HK Modular';
+            src: url('fonts/Modular.woff2') format('woff2');
+            font-weight: 600; 
+            font-style: normal;
+            font-display: swap; 
+        }
+        @font-face {
+            font-family: 'Ignis Sharp';
+            src: url('fonts/Ignis et Glacies Sharp.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap; 
+        }
+
+        /* Bold */
+        @font-face {
+            font-family: 'Ignis Sharp';
+            src: url('fonts/Ignis et Glacies Sharp Bold.ttf') format('truetype');
+            font-weight: 800; /* Set to match your title's weight */
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #FA8F32;
+            --secondary-color: #EF6E4A;
+            --dark-blue: #0F4A7F;
+            --darker-blue: #0C2D4C;
+            --light-bg: #f8fafc;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --accent: #FA6146;
+            --sunset-orange: #FAB337;
+            --sunset-red: #DE5A4A;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--darker-blue) 100%);
+            color: white;
+            padding: 60px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('media/sunset_perth.svg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(to top, var(--primary-color) 0%, transparent 100%);
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            z-index: 1;
+        }
+
+        .logo {
+            max-width: 450px;  /* Changed from 200px */
+            height: auto;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            letter-spacing: 0.05em;
+            /* font-family: 'HK Modular', sans-serif;  */
+            font-family: 'Ignis Sharp', sans-serif;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .event-details {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .event-detail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .event-detail-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .event-detail-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 18px 48px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--dark-bg);
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 60px 20px;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* background-image: url('media/sunset_perth.svg'); */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.08;
+            z-index: 0;
+        }
+
+        .highlight-box > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .highlight-box h2 {
+            color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+        }
+
+        .sponsors-section {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            align-items: center;
+        }
+
+        .sponsor-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            height: 160px; 
+        }
+
+        .sponsor-item > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;             
+            flex-grow: 1; 
+        }
+
+        .sponsor-logo {
+            max-width: 150px;
+            max-height: 80px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .sponsor-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .sponsor-category {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            display: block;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        .location-section {
+            background: var(--darker-blue);
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .location-section h2 {
+            color: white;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .location-card {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .location-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .speakers-section {
+            padding: 60px 20px;
+            background: var(--light-bg);
+        }
+
+        #sessionize-container {
+            margin-top: 40px;
+        }
+
+        footer {
+            background: var(--darker-blue);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .footer-note {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .sponsor-item {
+            text-decoration: none !important;
+            color: inherit; /* keeps your existing text color */
+        }
+
+        .sponsor-item * {
+            text-decoration: none !important; /* removes underline from inner text */
+        }
+
+        .hero-mini-branded {
+            /* Main container styling: gradient, fixed position */
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--darker-blue) 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .hero-mini-branded::before {
+            /* Background image layer */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('media/sunset_perth.svg');
+            background-size: cover;
+            background-position: center 13%; /* 🎯 FIX: Centers horizontally, aligns to top vertically */
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .hero-mini-branded .hero-content {
+            /* Ensures quokka and text align correctly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .hero-mini-branded .quokka-header-mini {
+            /* Quokka image size */
+            width: 150px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .hero-mini-branded h1 {
+            /* Title text styling */
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0;
+            line-height: 1.2;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-family: 'Ignis Sharp', sans-serif;
+            letter-spacing: 0.03em;
+        }
+
+        .partner-logo-mini {
+            /* Partner logo positioning */
+            position: absolute; 
+            top: 15px; 
+            left: 20px; 
+            z-index: 10;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .event-details {
+                gap: 20px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            #floating-cta {
+                padding: 15px 35px;
+                font-size: 1rem;
+            }
+
+        }
+
+        #floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 24px rgba(250, 143, 50, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(100px);
+            pointer-events: none;
+        }
+
+        #floating-cta.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        #floating-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(250, 143, 50, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating CTA Button -->
+    <a href="https://luma.com/ywxrt4pk" id="floating-cta" target="_blank">Register Now 🚀</a>
+
+    <header class="hero-mini-branded">
+        <div class="partner-logo-mini">
+            <img src="media/logo-curtin.svg" alt="Curtin University Partner Logo" width="120" style="height:auto;">
+        </div>
+        
+        <div class="hero-content">
+            <img src="media/Adobe Express - file.png" alt="AI Disrupt Summit Quokka" class="quokka-header-mini">
+            <h1>AI Disrupt Summit <br> PERTH 2025</h1>
+        </div>
+    </header>
+
+    <nav style="text-align: center; padding: 15px 10px; background: white; border-bottom: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.05); overflow-x: auto; white-space: nowrap;">
+        <a href="index.html" style="margin: 0 15px; font-size: 1.1rem; text-decoration: none; color: var(--dark-blue); font-weight: 700;">Home</a>
+        <a href="agenda.html" style="margin: 0 15px; font-size: 1.1rem; text-decoration: none; color: var(--dark-blue); font-weight: 700;">Speaker Series</a>
+        <a href="expo.html" style="margin: 0 15px; font-size: 1.1rem; text-decoration: none; color: var(--dark-blue); font-weight: 700;">Startup Expo</a>
+        <a href="hackathon.html" style="margin: 0 15px; font-size: 1.1rem; text-decoration: none; color: var(--dark-blue); font-weight: 700;">Hackathon</a>
+        <a href="workshop.html" style="margin: 0 15px; font-size: 1.1rem; text-decoration: none; color: var(--dark-blue); font-weight: 700;">Workshop</a>
+        <a href="sundowner.html" style="margin: 0 15px; font-size: 1.1rem; text-decoration: none; color: var(--dark-blue); font-weight: 700;">Sundowner</a>
+    </nav>
+    
+    <div class="container">
+        <section>
+            <h2 style="margin-bottom: 5px; text-align: center; color: var(--text-dark);">Your First AI Home Lab</h2>            
+            <h3 style="text-align: center; font-size: 1.8rem; font-weight: 500; margin-bottom: 50px; color: var(--secondary-color);">
+                Build It, Automate It, Securely Reach It
+            </h3>
+
+            <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 30px;">
+                
+                <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); width: 100%; display: flex; flex-direction: column; align-items: center;">
+                    
+                    <img src="media/yifei.jpeg" alt="Yifei Ren" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;"> 
+                    
+                    <p style="font-size: 1.8rem; font-weight: 800; color: var(--dark-blue); margin-bottom: 5px; font-family: Arial, sans-serif;">Yifei Ren</p>
+
+                    <p style="font-size: 1.1rem; color: var(--text-dark); margin-bottom: 15px; font-family: Arial, sans-serif;">Workshop Presenter</p>
+                    
+                    <a href="https://www.veilnet.org/" target="_blank" style="text-decoration: none;">
+                        <p style="font-size: 1.1rem; color: var(--dark-blue); font-weight: 600; margin-bottom: 25px;">Founder of VeilNet</p>
+                    </a>
+                    
+                    <a href="https://www.veilnet.org/" target="_blank" style="text-decoration: none; display: block;">
+                        <img src="media/veilnet.png" alt="VeilNet Logo" style="max-height: 160px; margin: 0 auto; display: block;">
+                    </a>
+                </div>
+
+                <p style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 30px; color: var(--text-dark); text-align: center;">
+                    Want to run your own AI models and automation tools without relying on expensive cloud services? In this hands-on workshop, you’ll learn how to build your own <strong>private, secure, and low-cost personal AI setup.</strong>
+                </p>
+
+            </div>
+        </section>
+    </div>
+
+    <div class="highlight-box" style="margin-top: -70px;">
+        <div class="container" style="padding: 0;">
+            <h2 style="margin-bottom: 20px; color: white;">Prerequisites & What to Bring</h2>
+            <p style="text-align: center; font-size: 1.3rem; max-width: 800px; margin: 0 auto; line-height: 1.8; color: white;">
+                <strong>Essentials for this hands-on session:</strong>
+                <br><br>
+                <strong>1. Laptop & Charger:</strong> You must bring a fully charged laptop ready for coding.
+                <br>
+                <strong>2. Basic Knowledge:</strong> Have a basic understanding of <strong>network concepts</strong> and <strong>virtual machines (VMs)</strong>.
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <section>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--dark-blue); text-align: center;">What You Will Learn:</h3>
+                
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="display: flex; align-items: flex-start; margin-bottom: 25px;">
+                        <span style="font-size: 1.8rem; margin-right: 15px; color: var(--accent);">🧠</span>
+                        <div style="text-align: left;">
+                            <strong style="display: block; font-size: 1.2rem; margin-bottom: 5px; color: var(--primary-color);">Self-host Ollama to run local LLMs</strong>
+                            <span style="color: var(--text-dark); font-size: 1.05rem;">Take control of your AI by running powerful, open-source Large Language Models right on your own hardware.</span>
+                        </div>
+                    </li>
+                    
+                    <li style="display: flex; align-items: flex-start; margin-bottom: 25px;">
+                        <span style="font-size: 1.8rem; margin-right: 15px; color: var(--accent);">🔁</span>
+                        <div style="text-align: left;">
+                            <strong style="display: block; font-size: 1.2rem; margin-bottom: 5px; color: var(--primary-color);">Build powerful automations using n8n</strong>
+                            <span style="color: var(--text-dark); font-size: 1.05rem;">Connect your self-hosted AI models and other services using this node-based automation tool.</span>
+                        </div>
+                    </li>
+
+                    <li style="display: flex; align-items: flex-start; margin-bottom: 25px;">
+                        <span style="font-size: 1.8rem; margin-right: 15px; color: var(--accent);">🔐</span>
+                        <div style="text-align: left;">
+                            <strong style="display: block; font-size: 1.2rem; margin-bottom: 5px; color: var(--primary-color);">Access both tools securely from anywhere using VeilNet</strong>
+                            <span style="color: var(--text-dark); font-size: 1.05rem;">VeilNet makes your services feel like they’re on a private LAN - even across the internet - so you can safely experiment and build.</span>
+                        </div>
+                    </li>
+                    
+                    <li style="display: flex; align-items: flex-start; margin-bottom: 25px;">
+                        <span style="font-size: 1.8rem; margin-right: 15px; color: var(--accent);">🚫</span>
+                        <div style="text-align: left;">
+                            <strong style="display: block; font-size: 1.2rem; margin-bottom: 5px; color: var(--primary-color);">Do it all without port forwarding, public IPs, or exposing your server</strong>
+                            <span style="color: var(--text-dark); font-size: 1.05rem;">Leverage best practices for security and privacy from day one.</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <h3 style="font-size: 1.8rem; margin-top: 50px; margin-bottom: 15px; color: var(--dark-blue); text-align: center;">Ideal Use Cases:</h3>
+                <p style="font-size: 1.2rem; color: var(--text-dark); line-height: 1.8; text-align: center;">
+                    Private chatbots, personal AI cloud storage, secure AI automation, low-cost and safe self-hosting, and more.
+                </p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 20px;">Ready to Shape the Future?</h2>
+            <a href="https://luma.com/ywxrt4pk" class="cta-button" target="_blank">Register Now</a>
+
+            <div class="footer-note">
+                <p><strong>Important Notes:</strong></p>
+                <p>Photos and videos will be taken at the event.</p>
+                <p>As this is a community event, tickets are non-refundable.</p>
+                <p style="margin-top: 30px; opacity: 0.7;">Build Club AU ABN: 64 674 988 562</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        // Floating CTA Button - Show after scrolling past hero
+        const floatingCTA = document.getElementById('floating-cta');
+        
+        // FIX HERE: Target the correct header class used on this page
+        const heroSection = document.querySelector('.hero-mini-branded'); 
+        
+        window.addEventListener('scroll', function() {
+            if (!heroSection) return; // Safely exit if the header isn't found
+            
+            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            
+            // We'll add a fixed offset (e.g., 50px) to ensure the button shows up even on a small header
+            if (window.scrollY > heroBottom + 50) { 
+                floatingCTA.classList.add('visible');
+            } else {
+                floatingCTA.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html>
