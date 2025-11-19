@@ -242,18 +242,19 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             padding: 20px;
             background: white;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             transition: transform 0.2s, box-shadow 0.2s;
-            min-height: 140px;
+            height: 160px; 
         }
 
-        .sponsor-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        .sponsor-item > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;             
+            flex-grow: 1; 
         }
 
         .sponsor-logo {
@@ -478,7 +479,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🚀</div>
-                    <h3>Startup Expo</h3>
+                    <h3>Start-up Expo</h3>
                     <p>Innovative local ventures showcasing AI technology</p>
                 </div>
                 <div class="feature-card">
@@ -499,7 +500,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">💰</div>
                     <h3>Investor Talks</h3>
-                    <p>Insights into the AI startup funding landscape</p>
+                    <p>Insights into the AI start-up funding landscape</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🍺</div>
@@ -513,6 +514,11 @@
     <div class="container">
         <section class="speakers-section">
             <h2>Speakers & Sessions</h2>
+            <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 20px; border-radius: 12px; margin-bottom: 30px; text-align: center;">
+            <p style="font-size: 1.0rem; margin: 0;">
+                👆 <strong>Click on any session below</strong> to learn more about the speakers and talk!
+            </p>
+            </div>
             <div id="sessionize-container">
                 <script type="text/javascript" src="https://sessionize.com/api/v2/v08m222o/view/GridSmart"></script>
             </div>
@@ -521,7 +527,7 @@
 
     <div class="highlight-box">
         <div class="container" style="padding: 0;">
-            <h2 style="margin-bottom: 20px;">Bring your devices</h2>
+            <h2 style="margin-bottom: 20px;">💻 Bring your devices</h2>
             <p style="text-align: center; font-size: 1.3rem; max-width: 800px; margin: 0 auto; line-height: 1.8;">
                 Attendees should bring their laptops to the summit<br>
                 Especially for Hackathon or Workshop sessions
@@ -539,6 +545,12 @@
             </p>
         </div>
     </div>
+
+    <div class="highlight-box">
+    <div class="container" style="padding: 0;">
+        <h2 style="margin-bottom: 20px;">💧 Bring Your Water Bottle</h2>
+    </div>
+</div>
 
     <div class="sponsors-section">
         <div class="container">
@@ -571,7 +583,7 @@
                 </a>
 
                 <a class="sponsor-item" href="https://www.blackbird.vc/" target="_blank">
-                    <img src="media/blackbird-logo.svg" alt="Blackbird" class="sponsor-logo">
+                    <img src="media/blackbird-logo.svg" alt="Blackbird" class="sponsor-logo" style="padding-top: 20px;">
                     <div>
                         <div class="sponsor-name">Blackbird</div>
                         <span class="sponsor-category">Sundowner Sponsor</span>
@@ -579,10 +591,10 @@
                 </a>
 
                 <a class="sponsor-item" href="https://dddperth.com/" target="_blank">
-                    <img src="media/dddperth-logo.svg" alt="DDD Perth" class="sponsor-logo">
+                    <img src="media/dddperth-logo.svg" alt="DDD Perth" class="sponsor-logo" style="padding-top: 20px;">
                     <div>
                         <div class="sponsor-name">DDD Perth</div>
-                        <span class="sponsor-category">Community Partner</span>
+                        <span class="sponsor-category">Sponsor</span>
                     </div>
                 </a>
 
@@ -596,6 +608,7 @@
 
                 <!-- Horst Maberly has no logo -->
                 <a class="sponsor-item" href="https://www.linkedin.com/in/horst-maberly-675b081b8/" target="_blank">
+                    <div style="height: 90px; margin-bottom: 10px;"></div> 
                     <div>
                         <div class="sponsor-name">Horst Maberly</div>
                         <span class="sponsor-category">Sponsor</span>
@@ -603,7 +616,7 @@
                 </a>
 
                 <a class="sponsor-item" href="https://lovable.dev/" target="_blank">
-                    <img src="media/lovable-logo.svg" alt="Lovable" class="sponsor-logo">
+                    <img src="media/lovable-logo.svg" alt="Lovable" class="sponsor-logo" style="padding-top: 20px;">
                     <div>
                         <div class="sponsor-name">Lovable</div>
                         <span class="sponsor-category">Sponsor</span>
@@ -655,7 +668,11 @@
                 </div>
                 <div class="location-card">
                     <h3>Bloom Basement Space</h3>
-                    <p>Additional activities in the basement area for hackathon, breakout sessions, and networking</p>
+                    <p>Additional activities in the basement area for hackathon, breakout sessions, and networking.</p>
+                    
+                    <p style="margin-top: 10px; font-weight: 600; color: var(--accent);">
+                        Directions: Turn left at main St Catherine's entrance and enter via the stairwell.
+                    </p>
                 </div>
                 <div class="location-card">
                     <h3>Courtyard</h3>
@@ -685,6 +702,10 @@
                     <h3 style="color: var(--primary-color); margin-bottom: 10px;">Do I need to be technical to attend?</h3>
                     <p>No! While we have technical workshops and a hackathon, the summit welcomes everyone from beginners to experts. Our speaker series and networking opportunities are valuable for all skill levels.</p>
                 </div>
+                <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 20px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">Will there be WiFi?</h3>
+                    <p>Yes! WiFi is available at St Catherine's college and in the Bloom Basement Space.</p>
+                </div>
                 <!-- <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <h3 style="color: var(--primary-color); margin-bottom: 10px;">Have more questions?</h3>
                     <p>Reach out to <a href="" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Susannah on LinkedIn</a> for any additional information!</p>
@@ -702,7 +723,6 @@
                 <p><strong>Important Notes:</strong></p>
                 <p>Photos and videos will be taken at the event.</p>
                 <p>As this is a community event, tickets are non-refundable.</p>
-                <p>Stay hydrated - please bring your water bottle!</p>
                 <p style="margin-top: 30px; opacity: 0.7;">Build Club AU ABN: 64 674 988 562</p>
             </div>
         </div>
