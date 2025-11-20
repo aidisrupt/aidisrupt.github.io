@@ -21,7 +21,7 @@
         </div>
     </header>
 
-    <nav style="text-align: center; padding: 15px 10px; background: white; border-bottom: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.05); overflow-x: auto; white-space: nowrap;">
+    <nav style="text-align: center; padding: 15px 10px; background: white; border-bottom: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.05); overflow-x: auto; white-space: nowrap; position: sticky; top: 0; z-index: 1000;">
         <a href="index.html" style="margin: 0 15px; font-size: 1.1rem; text-decoration: none; color: var(--dark-blue); font-weight: 700;">Home</a>
         <a href="agenda.html" style="margin: 0 15px; font-size: 1.1rem; text-decoration: none; color: var(--dark-blue); font-weight: 700;">Speaker Series</a>
         <a href="expo.html" style="margin: 0 15px; font-size: 1.1rem; text-decoration: none; color: var(--dark-blue); font-weight: 700;">Startup Expo</a>
@@ -37,16 +37,9 @@
                 Meet the innovative local startups driving the future of AI in Western Australia. These companies are actively disrupting industries and looking for new talent and investors.
             </p>
 
-            <div id="startup-profiles" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px;">
+            <h3 style="color: var(--primary-color); font-size: 1.8rem; margin-bottom: 25px; text-align: center; font-weight: 700;">AI Start-ups</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 60px;">
                 
-                <div class="feature-card" style="text-align: center;">
-                    <a href="https://www.reschematic.com/" target="_blank" class="startup-logo-link">
-                        <img src="media/reschematic.jpeg" alt="Reschematic logo" />
-                    </a>
-                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">
-                        Reschematic</h4>
-                </div>
-
                 <div class="feature-card" style="text-align: center;">
                     <a href="https://www.podyssey.com/" target="_blank" class="startup-logo-link">
                         <img src="media/podyssey.svg" alt="Podyssey logo" />
@@ -55,10 +48,55 @@
                 </div>
 
                 <div class="feature-card" style="text-align: center;">
+                    <a href="https://www.reschematic.com/" target="_blank" class="startup-logo-link">
+                        <img src="media/reschematic.jpeg" alt="Reschematic logo" />
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Reschematic</h4>
+                </div>
+
+                <div class="feature-card" style="text-align: center;">
                     <a href="https://talk2view.com/" target="_blank" class="startup-logo-link">
                         <img src="media/talk2view.jpeg" alt="Talk2View logo" />
                     </a>
                     <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Talk2View</h4>
+                </div>
+            </div>
+
+
+            <h3 style="color: var(--primary-color); font-size: 1.8rem; margin-bottom: 25px; text-align: center; font-weight: 700;">Early Stage</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 60px;">
+                
+                <div class="feature-card" style="text-align: center;">
+                    <a href="https://www.aiadvancements.com.au/" target="_blank" class="startup-logo-link">
+                        <img src="media/aiadvancements.jpeg" alt="AIAdvancements logo" />
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">AIAdvancements</h4>
+                </div>
+
+                <div class="feature-card" style="text-align: center;">
+                    <a href="https://argostech.net/" target="_blank" class="startup-logo-link">
+                        <img src="media/argostech_logo.jpeg" alt="Indrus logo" class="sponsor-logo">
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Indrus</h4>
+                </div>
+
+                <div class="feature-card" style="text-align: center;">
+                    <a href="https://veilnet.net/" target="_blank" class="startup-logo-link">
+                        <img src="media/veilnet.jpeg" alt="VeilNet logo" />
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">VeilNet</h4>
+                </div>
+            </div>
+
+
+            <h3 style="color: var(--primary-color); font-size: 1.8rem; margin-bottom: 25px; text-align: center; font-weight: 700;">Idea Stage</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 60px;">
+                
+                <div class="feature-card" style="text-align: center;">
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        <img src="https://placehold.co/600x400?text=AgataCabanek" alt="Agata Cabanek">
+                    </a>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Agata Cabanek</h4>
                 </div>
 
                 <div class="feature-card" style="text-align: center;">
@@ -69,76 +107,62 @@
                 </div>
 
                 <div class="feature-card" style="text-align: center;">
-                    <a href="https://veilnet.net/" target="_blank" class="startup-logo-link">
-                        <img src="media/veilnet.jpeg" alt="VeilNet logo" />
-                    </a>
-                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">VeilNet</h4>
-                </div>
-
-                <div class="feature-card" style="text-align: center;">
-                    <a href="https://www.aiadvancements.com.au/" target="_blank" class="startup-logo-link">
-                        <img src="media/aiadvancements.jpeg" alt="AIAdvancements logo" />
-                    </a>
-                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">AIAdvancements</h4>
-                </div>
-
-                <div class="feature-card" style="text-align: center;">
-                    <a href="https://argostech.net/" target="_blank" class="startup-logo-link">
-                        <img src="media/argostech_logo.jpeg" alt="Sponsor Name" class="sponsor-logo">
-                    </a>
-                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Indrus</h4>
-                </div>
-
-                <div class="feature-card" style="text-align: center;">
-                    <a href="https://www.matilda.health/" target="_blank" class="startup-logo-link">
-                        <img src="media/matilda-logo.png" alt="Matilda logo" />
-                    </a>
-                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Matilda</h4>
-                </div>
-
-                <div class="feature-card" style="text-align: center;">
-                    <a href="https://wadsih.org.au/" target="_blank" class="startup-logo-link">
-                        <img src="media/WADSIH-logo.png" alt="WadSIH logo" />
-                    </a>
-                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">WADSIH</h4>
-                </div>
-
-                <div class="feature-card" style="text-align: center;">
-                    <a href="https://www.blackbird.vc/" target="_blank" class="startup-logo-link">
-                        <img src="media/blackbird-logo.svg" alt="Blackbird logo" />
-                    </a>
-                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Blackbird</h4>
-                </div>
-
-                <div class="feature-card" style="text-align: center;">
-                    <a href="#" target="_blank" class="startup-logo-link">
-                        <img src="https://placehold.co/600x400?text=AgataCabanek" alt="Agata Cabanek">
-                    </a>
-                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Agata Cabanek</h4>
-                </div>
-
-                <div class="feature-card" style="text-align: center;">
-                    <a href="#" target="_blank" class="startup-logo-link">
-                        <img src="media/curtin.jpeg" alt="Curtin Entrepreneurship logo" />
-                    </a>
-                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Curtin Entrepreneurs</h4>
-                </div>
-
-                <div class="feature-card" style="text-align: center;">
                     <a href="#" target="_blank" class="startup-logo-link">
                         <img src="media/tradiescribe.jpeg" alt="Tradie Scribe logo" />
                     </a>
                     <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Tradie Scribe</h4>
                 </div>
+            </div>
 
-                <div class="feature-card" style="text-align: center;">
+
+            <h3 style="color: var(--primary-color); font-size: 1.8rem; margin-bottom: 25px; text-align: center; font-weight: 700;">Sponsors</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 60px;">
+                
+                <div class="feature-card" style="text-align: center; padding: 20px;">
+                    <a href="https://www.blackbird.vc/" target="_blank" class="startup-logo-link">
+                        <img src="media/blackbird-logo.svg" alt="Blackbird logo" />
+                    </a>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 5px; color: var(--dark-blue);">Blackbird</h4>
+                </div>
+
+                <div class="feature-card" style="text-align: center; padding: 20px;">
                     <a href="https://www.bloom.org.au/" target="_blank" class="startup-logo-link">
                         <img src="media/bloom-logo.png" alt="Bloom logo" />
                     </a>
-                    <h4 style="font-size: 1.4rem; margin-bottom: 5px; color: var(--dark-blue);">Bloom</h4>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 5px; color: var(--dark-blue);">Bloom</h4>
                 </div>
 
+                <div class="feature-card" style="text-align: center; padding: 20px;">
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        <img src="media/curtin.jpeg" alt="Curtin Entrepreneurship logo" />
+                    </a>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 5px; color: var(--dark-blue);">Curtin Entrepreneurs</h4>
+                </div>
+
+                <div class="feature-card" style="text-align: center; padding: 20px;">
+                    <a href="https://www.matilda.health/" target="_blank" class="startup-logo-link">
+                        <img src="media/matilda-logo.png" alt="Matilda logo" />
+                    </a>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 5px; color: var(--dark-blue);">Matilda</h4>
+                </div>
+
+                <div class="feature-card" style="text-align: center; padding: 20px;">
+                    <a href="https://wadsih.org.au/" target="_blank" class="startup-logo-link">
+                        <img src="media/WADSIH-logo.png" alt="WadSIH logo" />
+                    </a>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 5px; color: var(--dark-blue);">WADSIH</h4>
+                </div>
+
+                <!-- <div class="feature-card" style="text-align: center; padding: 20px;">
+                    <a href="#" target="_blank" class="startup-logo-link">
+                        <img src="https://placehold.co/600x400?text=WeMoney" alt="WeMoney logo" />
+                    </a>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 5px; color: var(--dark-blue);">WeMoney</h4>
+                </div> -->
+
             </div>
+
         </section>
     </div>
 
@@ -166,7 +190,6 @@
             
             const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
             
-            // We'll add a fixed offset (e.g., 50px) to ensure the button shows up even on a small header
             if (window.scrollY > heroBottom + 50) { 
                 floatingCTA.classList.add('visible');
             } else {
