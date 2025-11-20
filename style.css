@@ -646,7 +646,7 @@ footer {
 }
 .theme-sub-header {
     font-size: 0.9rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: var(--text-light);
     font-weight: 700;
     margin-top: 15px;
