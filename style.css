@@ -515,10 +515,10 @@ h2 {
 }
 
 .person-photo-placeholder {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 250px;
     background-color: #eee;
-    border-radius: 50%;
+    border-radius: 8px;  /* This makes it rectangular with rounded corners */
     margin-bottom: 15px;
     display: flex;
     align-items: center;
@@ -643,6 +643,16 @@ footer {
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 10px;
     display: inline-block;
+}
+.time-label {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 20px;
 }
 .theme-sub-header {
     font-size: 0.9rem;
