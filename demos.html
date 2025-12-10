@@ -9,6 +9,35 @@
       content="AI Disrupt Summit 2025 - A hands-on event bringing together AI engineers, researchers, founders, and investors in Perth, WA. December 13th, 2025."
     />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .image-text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .image-text-container img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+      @media (min-width: 768px) {
+        .image-text-container {
+          flex-direction: row;
+          align-items: flex-start;
+        }
+        .image-text-container img {
+          width: 45%;
+          max-width: 400px;
+          flex-shrink: 0;
+        }
+        .image-text-container > div {
+          flex: 1;
+        }
+      }
+    </style>
   </head>
   <body>
     <a href="https://luma.com/ywxrt4pk" id="floating-cta" target="_blank"
@@ -169,47 +198,55 @@
                 NVIDIA GB10 GPU - Hands-On Demo
               </h3>
             </div>
-            <p
-              style="
-                font-size: 1.1rem;
-                line-height: 1.7;
-                color: var(--text-dark);
-                margin-bottom: 20px;
-              "
-            >
-              Get hands-on with the new <strong>NVIDIA GB10 GPU</strong> -
-              essentially the same as the NVIDIA DGX Spark but housed in a sleek
-              Lenovo PGX chassis. This palm-sized, 240W powerhouse is among only
-              a few in Australia, with stock still extremely limited.
-            </p>
-            <p
-              style="
-                font-size: 1.1rem;
-                line-height: 1.7;
-                color: var(--text-dark);
-                margin-bottom: 20px;
-              "
-            >
-              Despite its small footprint - about the size of two mobile phones
-              - the <strong>Blackwell-architecture-based GB10</strong> offers a
-              portable and low-carbon alternative to larger systems like the RTX
-              4090, RTX 6000 Ada, and server-grade A100 GPUs. This is where
-              <strong>AI and Sustainability meet</strong>.
-            </p>
-            <p
-              style="
-                font-size: 1.1rem;
-                line-height: 1.7;
-                color: var(--text-dark);
-                margin-bottom: 20px;
-              "
-            >
-              In testing, it ran training scripts for a report generation model
-              <strong>several times faster than an A100</strong> - while
-              remaining impressively cool and quiet at 70% GPU utilisation. It
-              can even be configured as a Wi-Fi hotspot for wireless remote
-              access!
-            </p>
+            <div class="image-text-container">
+              <img src="media/GB10.jpeg" alt="NVIDIA GB10 GPU" />
+              <div>
+                <p
+                  style="
+                    font-size: 1.1rem;
+                    line-height: 1.7;
+                    color: var(--text-dark);
+                    margin-bottom: 20px;
+                  "
+                >
+                  Get hands-on with the new <strong>NVIDIA GB10 GPU</strong> -
+                  essentially the same as the NVIDIA DGX Spark but housed in a
+                  sleek Lenovo PGX chassis. This palm-sized, 240W powerhouse is
+                  among only a few in Australia, with stock still extremely
+                  limited.
+                </p>
+                <p
+                  style="
+                    font-size: 1.1rem;
+                    line-height: 1.7;
+                    color: var(--text-dark);
+                    margin-bottom: 20px;
+                  "
+                >
+                  Despite its small footprint - about the size of two mobile
+                  phones - the
+                  <strong>Blackwell-architecture-based GB10</strong> offers a
+                  portable and low-carbon alternative to larger systems like the
+                  RTX 4090, RTX 6000 Ada, and server-grade A100 GPUs. This is
+                  where <strong>AI and Sustainability meet</strong>.
+                </p>
+                <p
+                  style="
+                    font-size: 1.1rem;
+                    line-height: 1.7;
+                    color: var(--text-dark);
+                    margin-bottom: 20px;
+                  "
+                >
+                  In testing, it ran training scripts for a report generation
+                  model
+                  <strong>several times faster than an A100</strong> - while
+                  remaining impressively cool and quiet at 70% GPU utilisation.
+                  It can even be configured as a Wi-Fi hotspot for wireless
+                  remote access!
+                </p>
+              </div>
+            </div>
             <div
               style="
                 background: #f0f9f0;
@@ -219,8 +256,7 @@
               "
             >
               <p style="font-size: 0.95rem; color: var(--text-dark); margin: 0">
-                <strong>Presented by:</strong> Dr Sonny Pham, Associate
-                Professor at Curtin University
+                <strong>Presented by:</strong> Dr Ash Doshi
               </p>
             </div>
           </div>
